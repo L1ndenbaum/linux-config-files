@@ -1,0 +1,7 @@
+{
+    "battery": {
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "tooltip": true
+    }
+}
