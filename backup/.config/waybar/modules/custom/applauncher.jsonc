@@ -1,8 +1,0 @@
-{
-    "custom/applauncher": {
-        "tooltip-format": "Click to Open Applauncher or Right-Click to Select Wallpaper",
-        "format": "󰣇",
-        "on-click": "wofi --show drun",
-        "on-click-right": "waypaper"
-    }
-}

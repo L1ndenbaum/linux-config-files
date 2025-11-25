@@ -31,6 +31,23 @@
 }
 
 
+#custom-cpuinfo {
+	background: @secondary;
+	color: @on_secondary;
+	border-radius: 10px;
+	padding: 1px 6px;
+	margin: 2px 5px 2px 5px;
+}
+
+
+#hw-info-group {
+	background: @primary;
+	border-radius: 10px;
+	padding: 1px 6px;
+	margin: 2px 5px 2px 5px;
+}
+
+
 /* 时钟 */
 #clock {
 	background: @secondary;
@@ -102,12 +119,13 @@
 
 /* divs */
 #custom-applauncher {
-    background: @primary;
+	font-size: 20px;
+	background: @primary;
 	color: @on_primary;
     font-size: 15px;
     padding: 0px 7px;
     margin: 2px 0px;
-	border-radius: 0;
+	border-radius: 0; 
 }
 #custom-applauncher:hover {
 	color: @tertiary

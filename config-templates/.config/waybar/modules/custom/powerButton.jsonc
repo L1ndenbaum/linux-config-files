@@ -1,7 +1,7 @@
 {
     "custom/powerButton": {
 	    "format": "",
-	    "tooltip": "false",
+	    "tooltip": false,
 	    "on-click": "wlogout"
     }
 }

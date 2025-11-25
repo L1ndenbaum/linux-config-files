@@ -1,8 +1,0 @@
-{
-    "pulseaudio": {
-        "format": "  {volume}%",
-        "format-muted": " muted",
-        "on-click": "pavucontrol",
-        "tooltip": false
-    }
-}
