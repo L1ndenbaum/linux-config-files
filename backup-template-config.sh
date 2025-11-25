@@ -1,12 +1,12 @@
 #!/bin/bash
-# 备份你自己的  ~/.config 和 ～/. 文件
+# 备份我自己的  ~/.config 和 ～/. 文件
 project_root="$(cd "$(dirname "$0")" && pwd)"
 source "$project_root/scripts/lib/sync-utils.sh"
 
 config_list="$project_root/config-entry-list"
 home_dotfile_list="$project_root/home-dotfile-entry-list"
-backup_config_dir="$project_root/backup/.config"
-backup_home_dir="$project_root/backup/home"
+backup_config_dir="$project_root/config-templates/.config"
+backup_home_dir="$project_root/config-templates/home"
 
 mkdir -p "$backup_config_dir" "$backup_home_dir"
 

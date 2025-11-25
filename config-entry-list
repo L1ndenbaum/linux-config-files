@@ -1,0 +1,10 @@
+# 这份清单里是会被脚本备份/还原的, 如果有某项不需要, 就在开头用 '#' 注释它
+waybar
+waypaper
+wlogout
+wofi
+hypr
+kitty
+mako
+matugen
+theme

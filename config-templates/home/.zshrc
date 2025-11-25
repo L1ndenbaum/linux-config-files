@@ -10,20 +10,22 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# For Fcitx5
+# Only enable Fcitx5 if Fcitx5 installed
+# if command -v fcitx5 1>/dev/null
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-# For Nvidia
-export __GL_THREADED_OPTIMIZATIONS=1
-export __GL_SHADER_DISK_CACHE=1
-export __GL_SHADER_DISK_CACHE_PATH=/var/tmp/nvidia_shader_cache
-export NVIDIA_DRIVER_CAPABILITIES=all
-export __GL_SYNC_TO_VBLANK=1
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
+# Only enable NVIDIA-specific environment variables if NVIDIA driver is available
+if command -v nvidia-smi >/dev/null 2>&1; then
+    export __GL_THREADED_OPTIMIZATIONS=1
+    export __GL_SHADER_DISK_CACHE=1
+    export __GL_SHADER_DISK_CACHE_PATH=/var/tmp/nvidia_shader_cache
+    export NVIDIA_DRIVER_CAPABILITIES=all
+    export __GL_SYNC_TO_VBLANK=1
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+fi
 
 export PATH="$HOME/.local/bin:$PATH"
-
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 

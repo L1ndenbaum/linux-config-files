@@ -1,0 +1,49 @@
+[config]
+
+[templates]
+
+# Waybar：Light
+[templates.gtk-color-scheme-light]
+input_path  = "~/.config/matugen/preconfig-templates/waybar-color-scheme-light.css"
+output_path = "~/.config/theme/templates/waybar-color-scheme-light.css"
+# 生成完可以顺便 reload 一下 waybar
+post_hook   = "pkill -SIGUSR2 waybar || true"
+
+# Waybar：Dark
+[templates.gtk-color-scheme-dark]
+input_path  = "~/.config/matugen/preconfig-templates/waybar-color-scheme-dark.css"
+output_path = "~/.config/theme/templates/waybar-color-scheme-dark.css"
+post_hook   = "pkill -SIGUSR2 waybar || true"
+
+# Hyprland：Light
+[templates.hyprland-color-scheme-light]
+input_path  = "~/.config/matugen/preconfig-templates/hyprland-color-scheme-light.conf"
+output_path = "~/.config/theme/templates/hyprland-color-scheme-light.conf"
+post_hook   = "hyprctl reload || true"
+
+# Hyprland：Dark
+[templates.hyprland-color-scheme-dark]
+input_path  = "~/.config/matugen/preconfig-templates/hyprland-color-scheme-dark.conf"
+output_path = "~/.config/theme/templates/hyprland-color-scheme-dark.conf"
+post_hook   = "hyprctl reload || true"
+
+# Kitty：Light
+[templates.kitty-color-scheme-light]
+input_path  = "~/.config/matugen/preconfig-templates/kitty-color-scheme-light.conf"
+output_path = "~/.config/theme/templates/kitty-color-scheme-light.conf"
+
+# Kitty：Dark
+[templates.kitty-color-scheme-dark]
+input_path  = "~/.config/matugen/preconfig-templates/kitty-color-scheme-dark.conf"
+output_path = "~/.config/theme/templates/kitty-color-scheme-dark.conf"
+
+# Mako：Light
+[templates.mako-color-scheme-light]
+input_path  = "~/.config/matugen/preconfig-templates/mako-color-scheme-light.conf"
+output_path = "~/.config/theme/templates/mako-color-scheme-light.conf"
+
+# Mako：Dark
+[templates.mako-color-scheme-dark]
+input_path  = "~/.config/matugen/preconfig-templates/mako-color-scheme-dark.conf"
+output_path = "~/.config/theme/templates/mako-color-scheme-dark.conf"
+
