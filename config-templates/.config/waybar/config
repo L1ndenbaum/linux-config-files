@@ -26,12 +26,10 @@
   "modules-center": [
     "custom/divMiddleLeftFront",
     "clock",
-    //"custom/divMiddleLeftTail",
     "custom/divInnerLeft",
     "custom/applauncher",
     "hyprland/window",
     "custom/divInnerRight",
-    //"custom/divMiddleRightTail",
     "backlight",
     "custom/divMiddleRightFront"
   ],

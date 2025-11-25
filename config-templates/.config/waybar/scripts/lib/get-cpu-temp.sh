@@ -26,7 +26,7 @@ parse_cpu_hwmon() {
         temp_kdegree=$(cat "$input_file")
         label=$(cat "$label_file")
         temps+=($(echo "$((temp_kdegree/1000))℃"))
-        labels+=($label)
+        labels+=("$label")
     done
 
     for ((i=0; i<${#labels[@]}; i++)); do
