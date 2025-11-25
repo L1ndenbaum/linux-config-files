@@ -7,23 +7,14 @@ fi
 
 source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
+# 启用 Go Modules 功能
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+go env -w GOPROXY=https://goproxy.io,direct
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# For Fcitx5
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-
-# For Nvidia
-export __GL_THREADED_OPTIMIZATIONS=1
-export __GL_SHADER_DISK_CACHE=1
-export __GL_SHADER_DISK_CACHE_PATH=/var/tmp/nvidia_shader_cache
-export NVIDIA_DRIVER_CAPABILITIES=all
-export __GL_SYNC_TO_VBLANK=1
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-
-export PATH="$HOME/.local/bin:$PATH"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 

@@ -1,168 +1,126 @@
-@import url("../theme/waybar-current-color-scheme.css");
-
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    font-size: 11px;
-    opacity: 1;
-	padding: 0px 0px;
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
-#waybar {
-	background: alpha(@surface_container, 0.6);
-	border-radius: 25px;
+window#waybar {
+    background-color: #0f1117;
+    font-size: 14px;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0;
 }
 
-/* CPU Status */
-#cpu {
-	background: @primary;
-	color: @on_primary;
-	border-radius: 10px;
-	padding: 1px 6px;
-	margin: 2px 5px 2px 10px;
+/* Left-most: Arch icon */
+#custom-appmenu {
+  font-size: 4;
+  background-image: url('/usr/share/icons/cachyos.svg');
+  background-color: #1e222a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0px 12px;
+    
 }
 
-#temperature.cpu,
-#temperature.gpu {
-	background: @secondary;
-	color: @on_secondary;
-	border-radius: 10px;
-	padding: 1px 6px;
-	margin: 2px 5px 2px 5px;
-}
-
-
-/* 时钟 */
+/* Right-most: Clock */
 #clock {
-	background: @secondary;
-  	color: @on_secondary;
-	border-radius: 0px;
-	padding: 1px 6px;
-	margin: 2px 0;
+    font-size: 14px;
+    background-color: #1e222a;
+    color: #c0c0c0;
+    border-radius: 0px;
+    padding: 0px 8px;
 }
 
-/* workspace样式 */
-#workspaces {
-	background: alpha(@primary, 0.8);
-	border-radius: 15px;
-	padding: 1px 1px;
-	margin: 2px 5px;
-}
-
-/* workspace 按钮样式 */
-#workspaces button {
-  	padding: 3px 3px;
-  	margin: 1px 1px;
-  	border-radius: 15px;
-  	background: transparent;
-  	color: @on_primary;
-  	border: 1px solid transparent;
-}
-
-/* 正在使用的 workspace */
-#workspaces button.active {
-  	background: alpha(@primary_container, 0.4);
-	border-radius: 15px;
-  	color: @on_primary;
-}
-
-/* 鼠标悬停的 workspace */
-#workspaces button:hover {
-  border-color: alpha(@tertiary, 0.7);
-}
-
-/* 有窗口但不在当前显示器（urgent）的 workspace*/
-#workspaces button.urgent {
-  background: alpha(@secondary, 0.3);
-  color: @on_secondary;
-}
-
-/* 网络/音量/电池 */
-#network,
-#pulseaudio,
-#battery,
-#tray {
-	background: @primary;
-  	color: @on_primary;
-  	border-radius: 10px;
-	margin: 2px 5px;
-	padding: 1px 6px;
-}
-
-/* 鼠标悬停时变色 */
-#cpu:hover,
-#temperature.cpu:hover,
-#temperature.gpu:hover,
-#network:hover,
-#pulseaudio:hover,
-#battery:hover,
-#tray:hover,
-#custom-powerButton:hover {
-  background: alpha(@tertiary, 0.95);
-}
-
-/* divs */
-#custom-applauncher {
-    background: @primary;
-	color: @on_primary;
-    font-size: 15px;
-    padding: 0px 7px;
-    margin: 2px 0px;
-	border-radius: 0;
-}
-#custom-applauncher:hover {
-	color: @tertiary
-}
-
+/* Active window title */
 #window {
-    background: @primary;
-	color: @on_primary;
-	margin: 2px 0px;
-    padding: 0 10px;
-	border-radius: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #e0e0e0;
+    border-radius: 0px;
+    padding: 4px 12px;
+    background-color: #1e222a;
 }
 
-#custom-divInnerLeft,
-#custom-divInnerRight {
-	background: @secondary;
-    color: @primary;
-	padding: 0px;
-    margin: 2px 0px;
-    font-size: 30px;
-	border-radius: 0;
+/* Workspace container */
+#niri-workspaces {
+    background: #1e222a;
+    font-weight: bold;
+    border-radius: 0px;
+    font-size: 8px;
+    color: #e0e0e0;
 }
 
-#backlight {
-	background: @secondary;
-	color: @on_primary;
-	padding: 0px 7px;
-    margin: 2px 0px;
-	border-radius: 0;
+/* Individual workspace buttons */
+#niri-workspaces button {
+    border-radius: 0px;
+    font-size: 8px;
 }
 
-#custom-divMiddleLeftTail,
-#custom-divMiddleRightTail {
-	background: @secondary;
-	color: @secondary;
-	padding: 0px;
-    margin: 2px 0px;
-    font-size: 30px;
-    border-radius: 0;
+#workspaces button.active {
+    border-radius: 0px;
+    color: #0f1117;
+    background: #00ac89;
 }
 
-#custom-divMiddleLeftFront, 
-#custom-divMiddleRightFront {
-	color: @secondary;
-	padding: 0px;
-    margin: 2px 0px;
-    font-size: 30px;
-    border-radius: 0;
+#workspaces button:hover {
+    border-radius: 0px;
+    background: #0d3531;
+    border-width: 0px;
 }
 
+/* Power/exit button */
+#custom-exit {
+    background-color: #00ac89;
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f1117;
+    padding: 0px 6px;
+    margin: 2px 2px 2px 0;
+}
 
-#custom-powerButton {
-	background: @primary;
-	color: @surface_highest;
-	border-radius: 999px;
-	margin: 2px 10px 2px 5px;
-	padding: 1px 3px;
+/* Tooltips */
+tooltip {
+    border-radius: 12px;
+    background-color: #0f1117;
+    color: #c0c0c0;
+    padding: 4px 8px;
+}
+
+/* Taskbar */
+#taskbar {
+    background-color: #1e222a;
+    margin: 0px;
+    border-radius: 0px;
+    font-weight: normal;
+}
+
+/* All system info modules */
+#backlight,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#tray,
+#custom-updates,
+#custom-notification {
+    background-color: #1e222a;
+    font-size: 14px;
+    font-weight: 800;
+    color: #c0c0c0;
+    border-radius: 0px;
+    padding: 4px 10px;
+}
+
+/* Battery critical warning */
+#battery.critical:not(.charging) {
+    background-color: #e65100;
+    color: #ffffff;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #0f1117;
+        color: #ffffff;
+    }
 }

@@ -24,7 +24,7 @@ while IFS= read -r dotfile; do
         continue
     fi
 
-    src="$config_dir/$dotfile"
+    src="$config_home_dir/$dotfile"
     dst="$HOME/$dotfile"
 
     if [ -f "$src" ]; then
