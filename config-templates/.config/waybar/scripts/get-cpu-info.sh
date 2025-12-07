@@ -11,16 +11,17 @@ if [[ ! -f "$STATE_FILE" ]]; then
 fi
 current_state=$(cat "$STATE_FILE")
 
-model=" $(get_cpu_model)"
 case "$current_state" in
     freq)
+        model=" $(get_cpu_model)"
         freqs="$(get_cpu_freq)"
         text=$(echo "$freqs" | head -n 1)
         tooltip=$(printf "%s\n%s" "$model" "$freqs")
         ;;
     temp)
+        model=" $(get_cpu_model)"
         temps="$(parse_cpu_hwmon $(find_cpu_hwmon))"
-        text=$(echo "$temps" | head -n 1)
+        text=$(echo "$temps" | head -n 1)
         tooltip=$(printf "%s\n%s" "$model" "$temps")
         ;;
 esac

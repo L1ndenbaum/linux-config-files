@@ -1,0 +1,10 @@
+{
+    "group/net-audio-bat-group": {
+        "orientation": "inherit",
+        "modules": [
+            "network",
+            "pulseaudio",
+            "battery"
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "group/cpu-info-group": {
+        "orientation": "inherit",
+        "modules": [
+            "cpu",
+            "custom/cpuinfo"
+        ]
+    }
+}
