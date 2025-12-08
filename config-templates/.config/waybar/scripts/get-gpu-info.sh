@@ -1,36 +1,22 @@
 #!/bin/bash
 
 root_dir=$(cd $(dirname "0") && pwd)
-source "$root_dir"/lib/get-gpu-vendor.sh
+source "$root_dir"/lib/gpuinfo/get-gpu-pci-list.sh
 source "$root_dir"/lib/get-gpu-model.sh
 source "$root_dir"/lib/get-gpu-temp.sh
 source "$root_dir"/lib/get-gpu-freq.sh
 
-gpu_vendor=$(get_gpu_vendor)
+mkdir -p "$HOME/.cache/waybar/gpuinfo"
+gpu_pci_list_file="$HOME/.cache/waybar/gpuinfo/gpu_pci_list"
+current_displayed_gpu_idx_file="$HOME/.cache/waybar/gpuinfo/current_displayed_gpu_idx"
 
-case "$gpu_vendor" in
-    NVIDIA)
-        model=$(get_gpu_model_nvidia)
-        temp=$(get_gpu_temp_nvidia)
-        freq=$(get_gpu_freq_nvidia)
-        ;;
-    AMD)
-        model=$(get_gpu_model_amd)
-        temp=$(get_gpu_temp_amd)
-        freq=$(get_gpu_freq_amd)
-        ;;
-    INTEL)
-        model=$(get_gpu_model_intel)
-        temp=$(get_gpu_temp_intel)
-        freq=$(get_gpu_freq_intel)
-        ;;
-    *)
-        model="Unknown GPU"
-        temp="-"
-        freq="-"
-        ;;
-esac
+if [ ! -f $gpu_pci_list_file ]
+    echo $(get_gpu_pci_list) > $gpu_pci_list_file
+fi
 
-echo "Model: $model"
-echo "Temp:  $temp°C"
-echo "Freq:  $freq MHz"
+if [ ! -f $current_displayed_gpu_idx_file ]
+    echo "0" > $current_displayed_gpu_idx_file
+fi
+
+gpu_pci=$(sed -n "$(( $(cat "$current_displayed_gpu_idx_file") +1))p" "$gpu_pci_list_file")
+

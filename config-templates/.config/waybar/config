@@ -2,17 +2,15 @@
   "include": [
     "modules/cpu.jsonc",
     "modules/custom/cpuinfo.jsonc",
-    "modules/groups/cpu-info-group.jsonc",
+    "modules/groups/hw-info-group.jsonc",
     "modules/clock.jsonc",
     "modules/workspaces.jsonc",
     "modules/custom/dividers.jsonc",
     "modules/custom/applauncher.jsonc",
     "modules/window.jsonc",
     "modules/backlight.jsonc",
-    "modules/cava.jsonc",
     "modules/network.jsonc",
     "modules/pulseaudio.jsonc",
-    "modules/groups/net-audio-bat-group.jsonc",
     "modules/battery.jsonc",
     "modules/tray.jsonc",
     "modules/custom/powerButton.jsonc"
@@ -21,24 +19,24 @@
   "position": "top",
   "height": 8,
   "modules-left": [
-    "group/cpu-info-group",
-    "hyprland/workspaces"
+	  "cpu",
+    "group/hw-info-group",
+    "niri/workspaces"
   ],
   "modules-center": [
     "custom/divMiddleLeftFront",
     "clock",
-    //"custom/divMiddleLeftTail",
     "custom/divInnerLeft",
     "custom/applauncher",
-    "hyprland/window",
+    "niri/window",
     "custom/divInnerRight",
-    //"custom/divMiddleRightTail",
     "backlight",
-    "custom/divMiddleRightFront",
-    "cava"
+    "custom/divMiddleRightFront"
   ],
   "modules-right": [
-    "group/net-audio-bat-group",
+    "network",
+    "pulseaudio",
+    "battery",
     "tray",
     "custom/powerButton"
   ]

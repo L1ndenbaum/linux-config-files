@@ -5,6 +5,6 @@
         "return-type": "json",
         "tooltip": true,
         "format": "{}",
-        "on-click": "~/.config/waybar/scripts/lib/toggle-cpu-display-state.sh"
+        "on-click": "~/.config/waybar/scripts/lib/cpuinfo/toggle-cpu-display-state.sh"
     }
 }
