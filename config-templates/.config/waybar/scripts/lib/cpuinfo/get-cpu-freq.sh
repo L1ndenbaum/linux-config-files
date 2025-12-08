@@ -16,6 +16,6 @@ get_cpu_freq() {
     done
 
     for ((i=0; i<${#core_freqs[@]}; i++)); do
-        echo "  ${core_freqs[$i]}"
+        echo " ${core_freqs[$i]}"
     done
 }

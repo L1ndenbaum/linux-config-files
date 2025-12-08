@@ -1,6 +1,6 @@
 {
-    "niri/window": {
-        "min-length":5,
+    "hyprland/window": {
+        //"min-length":5,
         "max-length": 20
     }
 }

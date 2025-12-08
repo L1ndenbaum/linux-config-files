@@ -1,0 +1,9 @@
+{
+    "group/wm-workspaces-window-group": {
+        "orientation": "inherit",
+        "modules": [
+            "hyprland/workspaces",
+            "hyprland/window"
+        ]
+    }
+}

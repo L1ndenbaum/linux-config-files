@@ -2,16 +2,19 @@
   "include": [
     "modules/cpu.jsonc",
     "modules/custom/cpuinfo.jsonc",
-    "modules/groups/hw-info-group.jsonc",
+    "modules/groups/cpu-info-group.jsonc",
+    "modules/groups/wm-workspaces-window-group.jsonc",
     "modules/clock.jsonc",
     "modules/workspaces.jsonc",
     "modules/custom/dividers.jsonc",
     "modules/custom/applauncher.jsonc",
     "modules/window.jsonc",
     "modules/backlight.jsonc",
+    "modules/cava.jsonc",
     "modules/network.jsonc",
     "modules/pulseaudio.jsonc",
     "modules/battery.jsonc",
+    "modules/groups/net-audio-bat-group.jsonc",
     "modules/tray.jsonc",
     "modules/custom/powerButton.jsonc"
   ],
@@ -19,24 +22,21 @@
   "position": "top",
   "height": 8,
   "modules-left": [
-	  "cpu",
-    "group/hw-info-group",
-    "niri/workspaces"
+    "group/cpu-info-group",
+    "group/wm-workspaces-window-group"
   ],
   "modules-center": [
     "custom/divMiddleLeftFront",
     "clock",
     "custom/divInnerLeft",
     "custom/applauncher",
-    "niri/window",
+    "cava",
     "custom/divInnerRight",
     "backlight",
     "custom/divMiddleRightFront"
   ],
   "modules-right": [
-    "network",
-    "pulseaudio",
-    "battery",
+    "group/net-audio-bat-group",
     "tray",
     "custom/powerButton"
   ]

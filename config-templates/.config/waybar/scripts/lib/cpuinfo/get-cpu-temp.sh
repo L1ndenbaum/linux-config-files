@@ -30,6 +30,6 @@ parse_cpu_hwmon() {
     done
 
     for ((i=0; i<${#labels[@]}; i++)); do
-        echo "  ${labels[$i]}: ${temps[$i]}"
+        echo " ${labels[$i]}: ${temps[$i]}"
     done
 }
