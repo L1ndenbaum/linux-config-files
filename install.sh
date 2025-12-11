@@ -1,5 +1,7 @@
 #!/bin/bash
-# 用我的 config 文件替换你的
+set -euo pipefail
+
+# 用作者的 config 文件替换你的
 project_root="$(cd "$(dirname "$0")" && pwd)"
 source "$project_root/scripts/lib/sync-utils.sh"
 
@@ -7,6 +9,9 @@ config_list="$project_root/config-entry-list"
 home_dotfile_list="$project_root/home-dotfile-entry-list"
 config_dir="$project_root/config-templates"
 config_home_dir="$project_root/config-templates/home"
+
+#备份当前系统的config文件到 $project_dir/backup
+"$project_root/scripts/bkup-and-restore-configs/backup-current-configs.sh"
 
 # 覆盖 ~/.config 下的目录
 while IFS= read -r entry; do

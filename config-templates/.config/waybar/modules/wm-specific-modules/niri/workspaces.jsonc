@@ -1,0 +1,5 @@
+{
+    "niri/workspaces": {
+        "on-click": "hyprctl dispatch workspace e+1"
+    }
+}

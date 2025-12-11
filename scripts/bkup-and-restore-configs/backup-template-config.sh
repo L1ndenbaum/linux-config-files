@@ -1,7 +1,12 @@
 #!/bin/bash
-# 备份我自己的  ~/.config 和 ～/. 文件
-project_root="$(cd "$(dirname "$0")" && pwd)"
-source "$project_root/scripts/lib/sync-utils.sh"
+
+# 备份作者的  ~/.config 和 ~/. 文件
+current_script_path="$(readlink -f "$0")"
+current_script_dir="$(dirname "$current_script_path")"
+scripts_dir="$(dirname "$current_script_dir")"
+project_root="$(dirname "$scripts_dir")"
+
+source "$scripts_dir/lib/sync-utils.sh"
 
 config_list="$project_root/config-entry-list"
 home_dotfile_list="$project_root/home-dotfile-entry-list"

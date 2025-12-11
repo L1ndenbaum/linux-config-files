@@ -1,8 +1,0 @@
-{
-    "group/hw-info-group": {
-        "orientation": "inherit",
-        "modules": [
-            "custom/cpuinfo"
-        ]
-    }
-}

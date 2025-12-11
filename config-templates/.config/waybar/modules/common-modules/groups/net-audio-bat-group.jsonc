@@ -2,7 +2,7 @@
     "group/net-audio-bat-group": {
         "orientation": "inherit",
         "modules": [
-            "network",
+            //"network",
             "pulseaudio",
             "battery"
         ]

@@ -1,5 +1,5 @@
 pacman_packages=(
-	yay wofi wlogout waypaper libnotify mako dolpin
+	yay sddm wofi wlogout waypaper libnotify mako dolpin
 	wqy-zenhei awesome-terminal-fonts
 	qt5-wayland qt6-wayland 
 	fcitx5 fcitx5-configtool fcitx5-rime fcitx5-gtk fcitx5-qt fcitx5-chinese-addons
@@ -8,7 +8,7 @@ pacman_packages=(
 )
 
 aur_packages=(
-	clash-verge-rev-bin visual-studio-code-bin waybar-cava
+	clash-verge-rev-bin visual-studio-code-bin waybar-cava sddm-silent-theme
 	ttf-font-awesome-5
 	intellij-idea-community-edition
 )

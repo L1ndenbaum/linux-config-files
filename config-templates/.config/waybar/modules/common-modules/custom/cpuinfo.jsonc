@@ -1,0 +1,10 @@
+{
+    "custom/cpuinfo": {
+        "exec": "../../../scripts/cpuinfo/get-cpu-info.sh",
+        "interval": 3,
+        "return-type": "json",
+        "tooltip": true,
+        "format": "{}",
+        "on-click": "../../../scripts/cpuinfo/toggle-cpu-display-state.sh"
+    }
+}

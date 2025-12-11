@@ -5,7 +5,7 @@ sync_dir() {
     local dst="$2"
 
     mkdir -p "$dst"
-    rsync -a "$src/" "$dst/"
+    rsync -a --delete "$src/" "$dst/"
 }
 
 sync_file() {

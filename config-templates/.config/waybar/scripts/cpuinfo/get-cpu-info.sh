@@ -1,9 +1,9 @@
 #!/bin/bash
 
 root_dir="$(cd "$(dirname "$0")" && pwd)"
-source $root_dir/lib/cpuinfo/get-cpu-freq.sh
-source $root_dir/lib/cpuinfo/get-cpu-model.sh
-source $root_dir/lib/cpuinfo/get-cpu-temp.sh
+source $root_dir/../lib/cpuinfo/get-cpu-freq.sh
+source $root_dir/../lib/cpuinfo/get-cpu-model.sh
+source $root_dir/../lib/cpuinfo/get-cpu-temp.sh
 
 mkdir -p $HOME/.cache/waybar/cpuinfo
 STATE_FILE="$HOME/.cache/waybar/cpuinfo/cpuinfo-display_state"

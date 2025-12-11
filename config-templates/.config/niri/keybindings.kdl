@@ -111,7 +111,7 @@ binds {
 
     // ─── Modes ───
     MOD+V                               { toggle-window-floating; }
-    MOD+F                               { fullscreen-window; }
+    MOD+F                               { maximize-column; }
     MOD+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
