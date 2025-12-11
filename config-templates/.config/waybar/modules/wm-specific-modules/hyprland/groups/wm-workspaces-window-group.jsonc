@@ -2,8 +2,8 @@
     "group/wm-workspaces-window-group": {
         "orientation": "inherit",
         "modules": [
-            "niri/workspaces",
-            "niri/window"
+            "hyprland/workspaces",
+            "hyprland/window"
         ]
     }
 }

@@ -1,0 +1,5 @@
+sddm的安装
+install_packages的组织方式
+install.sh的完整完善
+nvidia变量
+把安装的一些脚本放在 scripts/lib 里作为function提供

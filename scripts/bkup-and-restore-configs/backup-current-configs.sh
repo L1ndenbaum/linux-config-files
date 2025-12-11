@@ -12,6 +12,7 @@ config_list="$project_root/config-entry-list"
 home_dotfile_list="$project_root/home-dotfile-entry-list"
 backup_config_dir="$project_root/backup/.config"
 backup_home_dir="$project_root/backup/home"
+backup_etc_dir="$project_root/backup/etc"
 
 mkdir -p "$backup_config_dir" "$backup_home_dir"
 
@@ -45,3 +46,6 @@ while IFS= read -r dotfile; do
         sync_file "$src" "$dst"
     fi
 done < "$home_dotfile_list"
+
+# 备份系统级etc文件
+sudo sync_file "/etc/sddm.conf" "$backup_etc_dir/sddm.conf"

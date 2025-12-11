@@ -38,3 +38,17 @@ while IFS= read -r dotfile; do
     fi
 done < "$home_dotfile_list"
 
+# 把waybar的wm相关模块调整为当前的$XDG_CURRENT_DESKTOP对应的wm
+if grep -qi "waybar" "$config_list"
+    "$project_root/scripts/waybar/toggle-waybar-modules-wm-field.sh"
+fi
+
+# read -r -p "给当前用户添加一个头像 -> [y/n]?" use_avatar
+# case $use_avatar in
+#     [Yy])
+
+#         ;;
+#     [Nn])
+
+#         ;;
+# esac
