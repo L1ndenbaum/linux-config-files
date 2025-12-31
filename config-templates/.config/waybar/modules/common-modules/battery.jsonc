@@ -1,7 +1,7 @@
 {
     "battery": {
-        "format": "{capacity}% ",
-        "format-charging": "{capacity}% ",
+        "format": " {capacity}%",
+        "format-charging": " {capacity}%",
         "tooltip": true
     }
 }

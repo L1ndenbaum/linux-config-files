@@ -6,7 +6,6 @@
 [templates.gtk-color-scheme-light]
 input_path  = "~/.config/matugen/preconfig-templates/waybar-color-scheme-light.css"
 output_path = "~/.config/theme/templates/waybar-color-scheme-light.css"
-# 生成完可以顺便 reload 一下 waybar
 post_hook   = "pkill -SIGUSR2 waybar || true"
 
 # Waybar：Dark
@@ -47,3 +46,12 @@ output_path = "~/.config/theme/templates/mako-color-scheme-light.conf"
 input_path  = "~/.config/matugen/preconfig-templates/mako-color-scheme-dark.conf"
 output_path = "~/.config/theme/templates/mako-color-scheme-dark.conf"
 
+# Rofi: light
+[templates.rofi-color-scheme-light]
+input_path  = "~/.config/matugen/preconfig-templates/rofi-color-scheme-light.rasi"
+output_path = "~/.config/theme/templates/rofi-color-scheme-light.rasi"
+
+# Rofi: dark
+[templates.rofi-color-scheme-dark]
+input_path  = "~/.config/matugen/preconfig-templates/rofi-color-scheme-dark.rasi"
+output_path = "~/.config/theme/templates/rofi-color-scheme-dark.rasi"

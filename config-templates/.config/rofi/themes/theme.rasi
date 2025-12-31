@@ -1,0 +1,86 @@
+/* mytheme.rasi - simple rounded translucent theme */
+
+* {
+  font: "JetBrainsMono Nerd Font 14";
+  text-color: #cdd6f4;
+  background-color: transparent;
+  border-color: #45475a;
+
+  /* 你想要“透明感”，优先用这里的 rgba，而不是整体 opacity */
+  bg: rgba(30, 30, 46, 0.92);
+  bg2: rgba(49, 50, 68, 0.95);
+  fg: #cdd6f4;
+  fg2: #a6adc8;
+  accent: #89b4fa;
+  urgent: #f38ba8;
+}
+
+window {
+  location: center;
+  width: 600;
+  border: 1px;
+  border-radius: 14px;
+  background-color: @bg;
+  border-color: @border-color;
+  padding: 16px;
+}
+
+mainbox {
+  background-color: transparent;
+  spacing: 12px;
+}
+
+inputbar {
+  background-color: transparent;
+  spacing: 10px;
+}
+
+prompt {
+  text-color: @fg2;
+}
+
+entry {
+  background-color: @bg2;
+  text-color: @fg;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+listview {
+  background-color: transparent;
+  columns: 1;
+  lines: 8;
+  spacing: 6px;
+  scrollbar: false;
+}
+
+element {
+  background-color: transparent;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+element normal.normal {
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: @accent;
+  text-color: #1e1e2e;
+}
+
+element urgent.normal {
+  background-color: @urgent;
+  text-color: #1e1e2e;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+}
+
+element-icon {
+  background-color: transparent;
+  size: 22px;
+  margin: 0px 10px 0px 0px;
+}
