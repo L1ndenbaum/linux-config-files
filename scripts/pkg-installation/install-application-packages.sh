@@ -1,5 +1,5 @@
 pacman_packages=(
-	yay sddm waybar wofi wlogout waypaper libnotify mako imagemagic
+	yay sddm waybar rofi wlogout waypaper libnotify mako imagemagic
 	wqy-zenhei awesome-terminal-fonts
 	qt5-wayland qt6-wayland 
 	fcitx5 fcitx5-configtool fcitx5-rime fcitx5-gtk fcitx5-qt fcitx5-chinese-addons
