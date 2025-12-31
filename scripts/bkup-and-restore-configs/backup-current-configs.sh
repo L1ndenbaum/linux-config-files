@@ -48,4 +48,4 @@ while IFS= read -r dotfile; do
 done < "$home_dotfile_list"
 
 # 备份系统级etc文件
-sudo sync_file "/etc/sddm.conf" "$backup_etc_dir/sddm.conf"
+sync_file "/etc/sddm.conf" "$backup_etc_dir/sddm.conf"

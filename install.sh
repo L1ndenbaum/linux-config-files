@@ -39,7 +39,7 @@ while IFS= read -r dotfile; do
 done < "$home_dotfile_list"
 
 # 把waybar的wm相关模块调整为当前的$XDG_CURRENT_DESKTOP对应的wm
-if grep -qi "waybar" "$config_list"
+if grep -qi "waybar" "$config_list"; then
     "$project_root/scripts/waybar/toggle-waybar-modules-wm-field.sh"
 fi
 
