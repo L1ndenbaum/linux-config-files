@@ -30,7 +30,7 @@
   "modules-center": [
     "custom/divOutterLeftFront",
     "custom/screenShotButton",
-    "custom/divOutterLeftTail",
+    //"custom/divOutterLeftTail",
 
     "custom/divMiddleLeftFront",
     "clock",
@@ -45,7 +45,7 @@
     "backlight",
     "custom/divMiddleRightFront",
 
-    "custom/divOutterRightTail",
+    //"custom/divOutterRightTail",
     "custom/gamemodeButton",
     "custom/divOutterRightFront"
   ],

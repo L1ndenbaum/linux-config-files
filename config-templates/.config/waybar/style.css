@@ -14,22 +14,13 @@
 }
 
 /* CPU Status */
-#cpu {	/* background: @secondary; */
-	color: @on_secondary;
-	border-radius: 5px;
-	padding: 0px 3px;
-	margin: 0px 2px;
-}
-
-
+#cpu,
 #custom-cpuinfo {
-	/* background: @secondary; */
-	color: @on_secondary;
+	color: @on_primary;
 	border-radius: 5px;
 	padding: 0px 3px;
 	margin: 0px 0px;
 }
-
 
 #cpu-info-group {
 	background: @primary;
@@ -40,7 +31,7 @@
 
 /* workspace样式 */
 #workspaces {
-	background: alpha(@primary, 0.8);
+	background: alpha(@primary_container, 0.8);
 	border-radius: 15px;
 	padding: 1px 1px;
 	margin: 0px 1px;
@@ -52,13 +43,13 @@
   	margin: 1px 1px;
   	border-radius: 15px;
   	background: transparent;
-  	color: @on_primary;
+  	color: @on_primary_container;
   	border: 1px solid transparent;
 }
 
 /* 正在使用的 workspace */
 #workspaces button.active {
-  	background: alpha(@primary_container, 0.4);
+  	background: alpha(@primary, 0.4);
 	border-radius: 15px;
   	color: @on_primary;
 }
@@ -75,41 +66,19 @@
 }
 
 #window {
-    background: @primary;
-	color: @on_primary;
+	color: @on_tertiary_container;
 	margin: 2px 0px;
     padding: 0 5px;
 	border-radius: 0;
 }
 
 #wm-workspaces-window-group {
-	background: @primary;
+	background: @tertiary_container;
 	border-radius: 10px;
 	padding: 1px 2px;
 	margin: 2px 5px 2px 5px;
 }
 
-
-/* 时钟 */
-#clock {
-	background: @secondary;
-  	color: @on_secondary;
-	border-radius: 0px;
-	padding: 1px 6px;
-	margin: 2px 0;
-}
-
-
-/* 网络/音量/电池 */
-#network,
-#pulseaudio,
-#battery {
-	background: @primary;
-  	color: @on_primary;
-  	border-radius: 10px;
-	margin: 0px 2px;
-	padding: 1px 3px;
-}
 
 /* 鼠标悬停时变色 */
 #custom-cpuinfo:hover,
@@ -121,48 +90,14 @@
   background: alpha(@tertiary, 0.95);
 }
 
+/*---------- 中间部分 ----------*/
 /* divs */
-#custom-divOutterLeftFront,
-#custom-divOutterRightFront {
-	color: @tertiary;
-	padding: 0px;
-	margin: 2px 0px;
-	font-size: 30px;
-	border-radius: 0;
-}
-
-#custom-screenShotButton {
-	background: @tertiary;
-  	color: @on_tertiary;
-	border-radius: 0px;
-	padding: 0px 7px;
-	margin: 2px 0;
-}
-
-#custom-gamemodeButton {
-	background: @tertiary;
-  	color: @on_tertiary;
-	border-radius: 0px;
-	padding: 0px 7px;
-	margin: 2px 0;
-}
-
-#custom-divOutterLeftTail,
-#custom-divOutterRightTail {
-	background: alpha(@tertiary, 0);
-	color: @tertiary;
-	padding: 0px;
-    margin: 2px 0px;
-    font-size: 30px;
-    border-radius: 0;
-}
-
 #custom-applauncher {
 	font-size: 20px;
 	background: @primary;
 	color: @on_primary;
     font-size: 15px;
-    padding: 0px 7px;
+    padding: 0px 2px;
     margin: 2px 0px;
 	border-radius: 0; 
 }
@@ -180,7 +115,7 @@
 
 #custom-divInnerLeft,
 #custom-divInnerRight {
-	background: alpha(@secondary, 0);
+	background: @primary;
     color: @primary;
 	padding: 0px;
     margin: 2px 0px;
@@ -188,21 +123,24 @@
 	border-radius: 0;
 }
 
-#backlight {
-	background: @secondary;
-	color: @on_primary;
-	padding: 0px 7px;
-    margin: 2px 0px;
-	border-radius: 0;
-}
-
 /* #cava.updated {
 	background: @secondary;
 } */
 
-#custom-divMiddleLeftFront, 
+/* 时钟与屏幕亮度按钮 */
+#clock,
+#backlight {
+	background: @primary_container;
+  	color: @on_primary_container;
+	border-radius: 0px;
+	padding: 1px 6px;
+	margin: 2px 0;
+}
+
+#custom-divMiddleLeftFront,
 #custom-divMiddleRightFront {
-	color: @secondary;
+	background: @tertiary_container;
+	color: @primary_container;
 	padding: 0px;
     margin: 2px 0px;
     font-size: 30px;
@@ -211,24 +149,66 @@
 
 #custom-divMiddleLeftTail,
 #custom-divMiddleRightTail {
-	background: alpha(@tertiary, 0);
-	color: @secondary;
+	background: @primary;
+	color: @primary_container;
 	padding: 0px;
     margin: 2px 0px;
     font-size: 30px;
     border-radius: 0;
 }
 
+#custom-divOutterLeftFront,
+#custom-divOutterRightFront {
+	color: @tertiary_container;
+	padding: 0px;
+	margin: 2px 0px;
+	font-size: 30px;
+	border-radius: 0;
+}
+
+
+#custom-divOutterLeftTail,
+#custom-divOutterRightTail{
+	background: @tertiary_container;
+	color: @tertiary_container;
+	padding: 0px;
+	margin: 2px 0px;
+	font-size: 30px;
+	border-radius: 0;
+}
+
+#custom-screenShotButton,
+#custom-gamemodeButton {
+	background: @tertiary_container;
+  	color:  @on_tertiary_container;
+	border-radius: 0px;
+	padding: 0px 7px;
+	margin: 2px 0;
+}
+
+
+
+/*---------- 右半部分 ----------*/
+/* 网络/音量/电池 */
+#network,
+#pulseaudio,
+#battery {
+  	color: @on_tertiary_container;
+  	border-radius: 10px;
+	margin: 0px 2px;
+	padding: 1px 3px;
+}
+
 #net-audio-bat-group {
-	background: @primary;
+	background: @tertiary_container;
 	border-radius: 10px;
 	padding: 1px 3px;
 	margin: 2px 3px;
 }
 
 #tray {
-	background: @primary;
-  	color: @on_primary;
+	background: @primary_container;
+  	color: @on_primary_container;
   	border-radius: 10px;
 	margin: 2px 3px;
 	padding: 1px 6px;
@@ -236,7 +216,7 @@
 
 #custom-powerButton {
 	background: @primary;
-	color: @surface_highest;
+	color: @on_primary;
 	border-radius: 999px;
 	margin: 2px 2px 2px 3px;
 	padding: 1px 3px;
