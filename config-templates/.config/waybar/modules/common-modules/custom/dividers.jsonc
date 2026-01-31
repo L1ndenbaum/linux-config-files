@@ -1,4 +1,14 @@
 {
+    "custom/divOutterLeftFront": {
+        "format": "",
+        "tooltip": false
+    },
+    
+    "custom/divOutterLeftTail": {
+        "format": "",
+        "tooltip": false
+    },
+
     "custom/divMiddleLeftFront": {
         "format": "",
         "tooltip": false
@@ -25,6 +35,16 @@
     },
 
     "custom/divMiddleRightFront": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/divOutterRightTail": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/divOutterRightFront": {
         "format": "",
         "tooltip": false
     }

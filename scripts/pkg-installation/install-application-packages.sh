@@ -5,7 +5,7 @@ pacman_packages=(
 	fcitx5 fcitx5-configtool fcitx5-rime fcitx5-gtk fcitx5-qt fcitx5-chinese-addons
 	networkmanager network-manager-applet blueman bluez 
 	pipewire wireplumber pipewire-pulse pipewire-alsa pipewire-jack
-    thunar tumbler ffmpegthumbnailer poppler-glib librsvg
+    thunar tumbler ffmpegthumbnailer poppler-glib librsvg ristretto
 	udisks2 gvfs gvfs-mtp ntfs-3g
 )
 

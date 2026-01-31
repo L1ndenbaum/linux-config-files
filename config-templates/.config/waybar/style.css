@@ -112,18 +112,51 @@
 }
 
 /* 鼠标悬停时变色 */
-#cpu:hover,
 #custom-cpuinfo:hover,
 #temperature.cpu:hover,
 #temperature.gpu:hover,
 #network:hover,
 #pulseaudio:hover,
-#battery:hover,
 #custom-powerButton:hover {
   background: alpha(@tertiary, 0.95);
 }
 
 /* divs */
+#custom-divOutterLeftFront,
+#custom-divOutterRightFront {
+	color: @tertiary;
+	padding: 0px;
+	margin: 2px 0px;
+	font-size: 30px;
+	border-radius: 0;
+}
+
+#custom-screenShotButton {
+	background: @tertiary;
+  	color: @on_tertiary;
+	border-radius: 0px;
+	padding: 0px 7px;
+	margin: 2px 0;
+}
+
+#custom-gamemodeButton {
+	background: @tertiary;
+  	color: @on_tertiary;
+	border-radius: 0px;
+	padding: 0px 7px;
+	margin: 2px 0;
+}
+
+#custom-divOutterLeftTail,
+#custom-divOutterRightTail {
+	background: alpha(@tertiary, 0);
+	color: @tertiary;
+	padding: 0px;
+    margin: 2px 0px;
+    font-size: 30px;
+    border-radius: 0;
+}
+
 #custom-applauncher {
 	font-size: 20px;
 	background: @primary;
@@ -137,10 +170,17 @@
 	color: @tertiary
 }
 
+#cava {
+	background: @primary;
+	color: @on_primary;
+	padding: 0px 2px;
+    margin: 2px 0px;
+	border-radius: 0px;
+}
 
 #custom-divInnerLeft,
 #custom-divInnerRight {
-	background: @secondary;
+	background: alpha(@secondary, 0);
     color: @primary;
 	padding: 0px;
     margin: 2px 0px;
@@ -156,21 +196,12 @@
 	border-radius: 0;
 }
 
-#cava {
-	background: @primary;
-	color: @on_primary;
-	padding: 0px 2px;
-    margin: 2px 0px;
-	border-radius: 0px;
-}
-
 /* #cava.updated {
 	background: @secondary;
 } */
 
-#custom-divMiddleLeftTail,
-#custom-divMiddleRightTail {
-	background: @secondary;
+#custom-divMiddleLeftFront, 
+#custom-divMiddleRightFront {
 	color: @secondary;
 	padding: 0px;
     margin: 2px 0px;
@@ -178,8 +209,9 @@
     border-radius: 0;
 }
 
-#custom-divMiddleLeftFront, 
-#custom-divMiddleRightFront {
+#custom-divMiddleLeftTail,
+#custom-divMiddleRightTail {
+	background: alpha(@tertiary, 0);
 	color: @secondary;
 	padding: 0px;
     margin: 2px 0px;

@@ -3,7 +3,9 @@
     "modules/common-modules/cpu.jsonc",
     "modules/common-modules/custom/cpuinfo.jsonc",
     "modules/common-modules/groups/cpu-info-group.jsonc",
+    "modules/common-modules/custom/screenShotButton.jsonc",
     "modules/common-modules/clock.jsonc",
+    "modules/common-modules/custom/gamemodeButton.jsonc",
     "modules/common-modules/custom/dividers.jsonc",
     "modules/common-modules/custom/applauncher.jsonc",
     "modules/common-modules/backlight.jsonc",
@@ -14,9 +16,9 @@
     "modules/common-modules/groups/net-audio-bat-group.jsonc",
     "modules/common-modules/tray.jsonc",
     "modules/common-modules/custom/powerButton.jsonc",
-    "modules/wm-specific-modules/niri/groups/wm-workspaces-window-group.jsonc",
-    "modules/wm-specific-modules/niri/workspaces.jsonc",
-    "modules/wm-specific-modules/niri/window.jsonc"
+    "modules/wm-specific-modules/hyprland/groups/wm-workspaces-window-group.jsonc",
+    "modules/wm-specific-modules/hyprland/workspaces.jsonc",
+    "modules/wm-specific-modules/hyprland/window.jsonc"
   ],
   "layer": "top",
   "position": "top",
@@ -26,14 +28,26 @@
     "group/wm-workspaces-window-group"
   ],
   "modules-center": [
+    "custom/divOutterLeftFront",
+    "custom/screenShotButton",
+    "custom/divOutterLeftTail",
+
     "custom/divMiddleLeftFront",
     "clock",
+    "custom/divMiddleLeftTail",
+
     "custom/divInnerLeft",
     "custom/applauncher",
     "cava",
     "custom/divInnerRight",
+
+    "custom/divMiddleRightTail",
     "backlight",
-    "custom/divMiddleRightFront"
+    "custom/divMiddleRightFront",
+
+    "custom/divOutterRightTail",
+    "custom/gamemodeButton",
+    "custom/divOutterRightFront"
   ],
   "modules-right": [
     "group/net-audio-bat-group",

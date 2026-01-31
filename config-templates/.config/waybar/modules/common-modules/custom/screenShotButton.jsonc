@@ -1,0 +1,8 @@
+{
+    "custom/screenShotButton": {
+        "tooltip-format": "Click left to select a region and screen shot or click right to fullscreen shot",
+        "format": "",
+        "on-click": "slurp | grim -g - - | tee ~/Pictures/screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy --type image/png",
+        "on-click-right": "grim - | tee ~/Pictures/screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy --type image/png"
+    }
+}
