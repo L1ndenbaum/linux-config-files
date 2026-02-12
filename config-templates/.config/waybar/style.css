@@ -32,9 +32,9 @@
 /* workspace样式 */
 #workspaces {
 	background: alpha(@primary_container, 0.8);
-	border-radius: 15px;
+	border-radius: 999px;
 	padding: 1px 1px;
-	margin: 0px 1px;
+	margin: 0px 2px;
 }
 
 /* workspace 按钮样式 */
@@ -87,7 +87,7 @@
 #network:hover,
 #pulseaudio:hover,
 #custom-powerButton:hover {
-  background: alpha(@tertiary, 0.95);
+  background: alpha(@primary_container, 0.95);
 }
 
 /*---------- 中间部分 ----------*/
