@@ -17,7 +17,7 @@ backup_etc_dir="$project_root/backup/etc"
 mkdir -p "$backup_config_dir" "$backup_home_dir"
 
 # 备份 ~/.config 下的目录
-while IFS= read -r entry; do
+while IFS= read -r entry || [[ -n "$entry" ]]; do
     # 跳过空行或以 # 开头
     if [[ -z "$entry" || "$entry" == \#* ]]; then
         continue
@@ -33,7 +33,7 @@ while IFS= read -r entry; do
 done < "$config_list"
 
 # 备份 dotfiles
-while IFS= read -r dotfile; do
+while IFS= read -r dotfile || [[ -n "$dotfile" ]]; do
     if [[ -z "$dotfile" || "$dotfile" == \#* ]]; then
         continue
     fi

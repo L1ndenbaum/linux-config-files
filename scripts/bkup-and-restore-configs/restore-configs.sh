@@ -14,7 +14,7 @@ backup_config_dir="$project_root/backup/.config"
 backup_home_dir="$project_root/backup/home"
 
 # 还原 ~/.config 下的目录
-while IFS= read -r entry; do
+while IFS= read -r entry || [[ -n "$entry" ]]; do
     # 跳过空行或以 # 开头
     if [[ -z "$entry" || "$entry" == \#* ]]; then
         continue
@@ -30,7 +30,7 @@ while IFS= read -r entry; do
 done < "$config_list"
 
 # 还原 dotfiles
-while IFS= read -r dotfile; do
+while IFS= read -r dotfile || [[ -n "$dotfile" ]]; do
     if [[ -z "$dotfile" || "$dotfile" == \#* ]]; then
         continue
     fi

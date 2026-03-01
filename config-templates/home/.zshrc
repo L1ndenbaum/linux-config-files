@@ -11,10 +11,11 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Only enable Fcitx5 if Fcitx5 installed
-# if command -v fcitx5 1>/dev/null
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
+if command -v fcitx5 1>/dev/null 2>&1; then
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS="@im=fcitx"
+fi
 
 # Only enable NVIDIA-specific environment variables if NVIDIA driver is available
 if command -v nvidia-smi >/dev/null 2>&1; then
@@ -26,14 +27,13 @@ if command -v nvidia-smi >/dev/null 2>&1; then
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
 fi
 
-export PATH="$HOME/.local/bin:$PATH"
+alias ls='ls -lha'
+alias vim='nvim'
+
+export PATH="$HOME/.local/bin:$HOME/Android/Sdk/platform-tools:$PATH"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export HTTP_PROXY=http://127.0.0.1:9090
-export HTTPS_PROXY=http://127.0.0.1:9090
-export NO_PROXY=localhost,127.0.0.1

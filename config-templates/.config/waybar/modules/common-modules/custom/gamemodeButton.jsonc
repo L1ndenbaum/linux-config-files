@@ -2,7 +2,7 @@
     "custom/gamemodeButton": {
         "tooltip-format": "Click to toggle game mode or normal mode",
         "format": "",
-        "on-click": "powerprofilesctl set performance && notify-send -t 3000 'Power Profile Set:' 'Performance' ",
-        "on-click-right": "powerprofilesctl set balanced && notify-send -t 3000 'Power Profile Set:' 'Balanced' "
+        "on-click": "powerprofilesctl set balanced && notify-send -t 3000 'Power Profile Set:' 'Balanced' ",
+        "on-click-right": "powerprofilesctl set power-saver && notify-send -t 3000 'Power Profile Set:' 'Power Saver' "
     }
 }
