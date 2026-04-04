@@ -1,5 +1,5 @@
 pacman_packages=(
-	yay sddm waybar rofi wlogout waypaper libnotify mako
+	yay sddm waybar rofi wlogout waypaper libnotify mako matugen
 	wqy-zenhei awesome-terminal-fonts
 	qt5-wayland qt6-wayland
 	fcitx5 fcitx5-configtool fcitx5-rime fcitx5-gtk fcitx5-qt fcitx5-chinese-addons
@@ -10,12 +10,12 @@ pacman_packages=(
 	xorg-xrdb
 	qemu-full virt-manager swtpm
 	slurp grim
+    zoxide
 )
 
 aur_packages=(
 	clash-verge-rev-bin visual-studio-code-bin sddm-silent-theme
 	ttf-font-awesome-5
-	intellij-idea-community-edition
 )
 
 sudo pacman -S --needed "${pacman_packages[@]}"
