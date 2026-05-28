@@ -17,16 +17,6 @@ if command -v fcitx5 1>/dev/null 2>&1; then
     export XMODIFIERS="@im=fcitx"
 fi
 
-# Only enable NVIDIA-specific environment variables if NVIDIA driver is available
-if command -v nvidia-smi >/dev/null 2>&1; then
-    export __GL_THREADED_OPTIMIZATIONS=1
-    export __GL_SHADER_DISK_CACHE=1
-    export __GL_SHADER_DISK_CACHE_PATH=/var/tmp/nvidia_shader_cache
-    export NVIDIA_DRIVER_CAPABILITIES=all
-    export __GL_SYNC_TO_VBLANK=1
-    export __GLX_VENDOR_LIBRARY_NAME=nvidia
-fi
-
 alias ls='ls -lha'
 alias vim='nvim'
 
