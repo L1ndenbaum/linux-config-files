@@ -49,3 +49,4 @@
 # resize-overlay-duration = 4s 200ms
 theme = Catppuccin Mocha
 shell-integration = zsh
+background-opacity=1
